@@ -1,4 +1,3 @@
-
 import express from "express"
 import helmet from "helmet"
 import cors from 'cors'
@@ -7,6 +6,8 @@ import morgan from "morgan"
 import dotenv from "dotenv"
 import { userRouter } from "./routes/user"
 import { PrismaClient } from "./generated/prisma"
+import cookieParser from 'cookie-parser'
+import { authJwt } from "./middlewares/auth"
   
   dotenv.config({path: './.env',});
   
@@ -15,6 +16,7 @@ import { PrismaClient } from "./generated/prisma"
   
 
   const app = express();
+  app.use(cookieParser())
 export  const prisma =  new PrismaClient()
                                 
   
@@ -35,6 +37,9 @@ app.use(morgan('dev'))
   app.get('/', (req, res) => {
      res.send('Hello, World!');
   });
+  app.get("/api/v1/aa",authJwt,(req,res)=>{
+    res.send('Hello, World!');
+  })
   
   app.use("/api/v1", userRouter )
     

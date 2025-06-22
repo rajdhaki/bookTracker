@@ -12,16 +12,19 @@ import {
 import { Label } from "../components/ui/label"
 import { Input } from "../components/ui/input"
 import { Button } from "../components/ui/button"
+import { contextApi } from '../context/Context'
 
 const Login = () => {
     const [email, setmail] = useState<string>('')
     const [pass, setpass] = useState<string>('')
+    const {setloginStatus} = React.useContext(contextApi)
+
 
     const handleLogin = () => {
         axios.post("http://localhost:4000/api/v1/login", {
             email: email,
             password: pass
-        }).then(e => { console.log(e) }).catch(e => console.log(e))
+        }).then(e => { console.log(e) ; setloginStatus(true) }).catch(e => console.log(e))
     }
 
 
