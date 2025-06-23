@@ -6,7 +6,8 @@ import Home from './pages/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import { contextApi } from './context/Context';
-import ProctedRoute from './components/proctedRoute';
+// import ProctedRoute from './components/ProctedRoute';
+import Dashboard from './pages/Dashboard';
 
 
 function App() {
@@ -20,11 +21,11 @@ console.log(loginStatus);
     <BrowserRouter>
     <Navbar/>
       <Routes>
-        <Route path="/" element={<h1> hello world</h1>}/>
-        <Route path="/home" element={
-          <ProctedRoute>
-          <Home/>
-          </ProctedRoute>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/dashboard" element={
+          // <ProctedRoute>
+          <Dashboard/>
+          // </ProctedRoute>
           }/>
         <Route path='/login' element={<Login/>} />
         <Route path='/register' element={<Signup/>}/>

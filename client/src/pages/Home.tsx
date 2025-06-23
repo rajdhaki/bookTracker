@@ -1,11 +1,24 @@
 import React from 'react'
-import { Button } from '../components/ui/button'
+import BookCard from '../components/BookCard'
+
 
 const Home = () => {
   return (
-    <div className='w-full h-[60vh] flex flex-col gap-4 justify-center items-center'>
-      <h1 className='text-amber-700 text-3xl' >Welcome To Our Book-Tracker</h1>
-      <Button variant={'outline'} className="text-xl  !px-8 !py-3" >Welcome!!!</Button>
+    <div>
+      <div className='w-full h-full flex flex-col gap-2.5 justify-center items-center !mt-4'>
+        <h1 className='text-black font-semibold text-3xl' >Book-Tracker</h1>
+        <p className='w-[40%] text-center' >Inspirational designs, illustrations, and graphic elements from the world’s best designers.
+          Want more inspiration? Browse our search results</p>
+      </div>
+      <div className= "flex justify-center items-center gap-3 !mt-8 !px-32">
+        <BookCard/>
+        <BookCard/>
+        <BookCard/>
+        <BookCard/>
+
+
+
+      </div>
     </div>
   )
 }

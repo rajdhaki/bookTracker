@@ -24,7 +24,7 @@ const Login = () => {
         axios.post("http://localhost:4000/api/v1/login", {
             email: email,
             password: pass
-        }).then(e => { console.log(e) ; setloginStatus(true) }).catch(e => console.log(e))
+        }, {withCredentials:true}).then(e => { console.log(e) ; setloginStatus(true) }).catch(e => console.log(e))
     }
 
 

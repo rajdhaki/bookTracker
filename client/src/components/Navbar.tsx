@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Button } from './ui/button'
 import { Sheet, SheetTrigger, SheetContent } from "../components/ui/sheet"
 import { Link } from 'react-router-dom'
@@ -18,21 +16,21 @@ const Navbar = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side="left">
-          <Link href="#" className="mr-6 hidden lg:flex" prefetch={false}>
+          <Link to="/" className="mr-6 hidden lg:flex" prefetch={false}>
             <MountainIcon className="h-6 w-6" />
             <span className="sr-only">Acme Inc</span>
           </Link>
           <div className="grid gap-2 py-6">
-            <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+            <Link to="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
               Home
             </Link>
-            <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+            <Link to="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
               About
             </Link>
-            <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+            <Link to="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
               Services
             </Link>
-            <Link href="#" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
+            <Link to="/" className="flex w-full items-center py-2 text-lg font-semibold" prefetch={false}>
               Contact
             </Link>
           </div>
@@ -54,28 +52,28 @@ const Navbar = () => {
       </div>
       <nav className="lg:flex gap-6">
         <Link
-          to="/home"
+          to="/"
           className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           
         >
           Home
         </Link>
         <Link
-          href="#"
+          to="/dashboard"
           className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
           
         >
-          About
+          Dashboard
         </Link>
         <Link
-          href="#"
+          to="/"
           className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
          
         >
           Services
         </Link>
         <Link
-          href="#"
+          to="/"
           className="group text-xl inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 font-medium transition-colors hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-gray-100/50 data-[state=open]:bg-gray-100/50 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus:bg-gray-800 dark:focus:text-gray-50 dark:data-[active]:bg-gray-800/50 dark:data-[state=open]:bg-gray-800/50"
          
         >
