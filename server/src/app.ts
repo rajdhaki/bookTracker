@@ -37,10 +37,7 @@ app.use(morgan('dev'))
   app.get('/', (req, res) => {
      res.send('Hello, World!');
   });
-  app.get("/api/v1/aa",authJwt,(req,res)=>{
-    res.send('Hello, World!');
-  })
-  
+
   app.use("/api/v1", userRouter )
     
 
